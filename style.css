@@ -1,45 +1,60 @@
-*{
-    text-decoration: none;
-}
 
 header {
   background-image: url('fotoL.png');
-  width: 100%;               
-  height: 800px;             
-  background-size: cover;    
-  background-position: center; 
-  background-repeat: no-repeat; 
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
+.layout {
+  padding-left: 100px;
+  padding-right: 100px;
+
+}
+/* rgba(181, 167, 143, 0.916) og color*/
 .nav {
-  background-color: rgba(0,0,0,0.5); 
-  height: 100px;                    
+  background-color: rgba(227, 210, 179, 0.916);
+  height: 100px;
   display: flex;
-  justify-content: center;            
-  align-items: center;               
+  justify-content: center;
+  align-items: center;
 }
 
+ /* .nav:hover{
+  background-color: rgba(227, 210, 179);
+}  */
 .navdiv ul {
-  list-style: none;                  
-  display: flex;                     
-  gap: 50px;                         
-  align-items: center;               
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  align-items: center;
   margin: 0;
   padding: 0;
 }
 
 .navdiv ul li a {
   text-decoration: none;
-  color: #ffd2d2;
+  color: #ffffff;
   font-weight: bold;
   font-size: 20px;
 }
 
 .navdiv ul li h2 a {
-  font-size: 44px;                  
+  font-size: 44px;
   font-weight: bold;
   text-decoration: none;
-  color: #ffd2d2;
+  color: #ffffff;
+}
+
+.navdiv ul li h2 a:hover {
+  color: rgb(206, 172, 114);
+  font-size: 50px;
+}
+.navdiv ul li a:hover {
+  color: rgb(206, 172, 114);
+  font-size: 25px;
 }
 
 /* .nav{
@@ -60,16 +75,98 @@ li a{
     margin: 25px;
 }
      */
-ul{
-    font-family: 'Cormorant Garamond', serif;
+ul {
+  font-family: 'Cormorant Garamond', serif;
   font-size: 36px;
   letter-spacing: 3px;
 }
 
 
-    p{
-        font-family: 'Cormorant Garamond', serif;
-        font-size: 30px;
-        text-align: center;
-        color: #926c6c;
-    }
+.ist-info {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  text-align: center;
+  color: #926c6c;
+}
+.container{
+  display: flex;
+  flex-direction: row;
+}
+.contents{
+  
+  color: #926c6c;
+  display: block;
+  padding: 20px;
+  border: 1px solid rgb(198, 193, 193) ;
+  margin: 10px;
+  border-radius: 5%;
+  text-align: center;
+  font-family: 'Cormorant Garamond', serif;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.105);
+
+}
+
+.contents:hover{
+   transform: translateY(-5px);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.178);
+}
+
+/* qitu ja nis carousel*/
+
+.carousel {
+    position: relative;
+    width: 800px;
+    height: 400px;
+    margin: 40px auto;
+    overflow: hidden;
+    border-radius: 12px;
+}
+
+.carousel img {
+    width: 100%;      /* Imazhi zgjerohet sa container-i */
+    height: 100%;     /* Opsionale, mund të përdorësh auto për të ruajtur proporcionin */
+    object-fit: cover; /* Siguron që imazhi mbulojë të gjithë hapësirën pa deformim */
+}
+
+
+.slides {
+
+   display: flex;
+    width:100%; /* nëse ke 6 foto */
+    height: 100%;
+    transition: transform 0.4s ease;
+    background
+}
+
+.slide {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.6);
+    border: none;
+    font-size: 30px;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+}
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* qitu ja nis footer */
