@@ -1,3 +1,10 @@
+*{
+    font-family: 'Cormorant Garamond', serif;
+}
+body {
+  margin: 0;
+  
+}
 header {
   background-image: url("fotoL.png");
   width: 100%;
@@ -7,80 +14,54 @@ header {
   background-repeat: no-repeat;
 }
 
-.layout {
-  padding-left: 100px;
-  padding-right: 100px;
-}
-/* rgba(181, 167, 143, 0.916) og color*/
 .nav {
   background-color: rgba(227, 210, 179, 0.916);
   height: 100px;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
-
-/* .nav:hover{
-  background-color: rgba(227, 210, 179);
-}  */
-.navdiv ul {
+.nav ul {
   list-style: none;
   display: flex;
   gap: 50px;
   align-items: center;
-  margin: 0;
-  padding: 0;
+  font-size: 36px;
+  letter-spacing: 3px;
 }
 
-.navdiv ul li a {
+.nav ul li a {
   text-decoration: none;
   color: #ffffff;
   font-weight: bold;
   font-size: 20px;
 }
 
-.navdiv ul li h2 a {
+.nav ul li h2 a {
   font-size: 44px;
   font-weight: bold;
   text-decoration: none;
   color: #ffffff;
 }
 
-.navdiv ul li h2 a:hover {
+.nav ul li h2 a:hover {
   color: rgb(206, 172, 114);
   font-size: 50px;
 }
-.navdiv ul li a:hover {
+.nav ul li a:hover {
   color: rgb(206, 172, 114);
   font-size: 25px;
 }
-
-/* .nav{
-    background-color: hsla(0, 0%, 0%, 0.51);
-    height: 125px;
+.nav ul li h2 a:active{
+  color:#ffffff
 }
-.navdiv{
-    display: flex; 
-    align-items: center;
-    justify-content: space-evenly;
-
-}  
-li{
-    display: inline-block;
+.nav ul li a:active{
+  color:#ffffff
 }
-li a{
-    color: #d19e9e;
-    margin: 25px;
+.layout {
+  padding-left: 100px;
+  padding-right: 100px;
 }
-     */
-ul {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 36px;
-  letter-spacing: 3px;
-}
-
-.ist-info {
-  font-family: "Cormorant Garamond", serif;
+.istudio-info {
   font-size: 30px;
   text-align: center;
   color: #926c6c;
@@ -91,13 +72,11 @@ ul {
 }
 .contents {
   color: #926c6c;
-  display: block;
   padding: 20px;
   border: 1px solid rgb(198, 193, 193);
   margin: 10px;
   border-radius: 5%;
   text-align: center;
-  font-family: "Cormorant Garamond", serif;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.105);
 }
 
@@ -106,7 +85,7 @@ ul {
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.178);
 }
 
-/* qitu ja nis carousel*/
+/* carousel*/
 
 .carousel {
   position: relative;
@@ -161,12 +140,9 @@ ul {
   background: rgba(255, 255, 255, 0.9);
 }
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-}
 
-/* qitu ja nis footer */
+
+/* footer */
 
 .footer {
   background-color: rgba(227, 210, 179, 0.95);
