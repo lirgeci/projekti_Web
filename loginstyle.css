@@ -1,0 +1,191 @@
+*{
+    font-family: Lucida Bright;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(foto11.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     height: 700px;
+}
+form{
+    background-color: rgb(206, 205, 202);
+    padding: 50px;
+    border-radius: 10px;
+    border:none;
+    width: 500px;
+    height: 700px;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    margin: 0;
+    padding: 0;
+    font-weight: 600;
+}
+.nav a {
+    color:rgb(123, 123, 123);;       
+    text-decoration: none;
+    font-size: 20px;
+    line-height: 50px;  
+    padding-left: 20px; 
+    letter-spacing: 3px;
+}
+
+.nav {
+  background-color:rgb(206, 205, 202);; 
+  height: 50px;                                    
+}
+
+.form-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    width: 440px;
+    height: 480px;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: rgb(121, 119, 117);
+}
+.welcome-sign{
+    text-align: center;
+    letter-spacing: 2px;
+}
+.google-sign{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    
+}
+.g-btn{
+    display: flex;
+    align-items: center;
+    text-align:center;
+    gap: 26px;
+    padding: 10px 20px;
+    width:300px;
+    border-radius:12px;
+    border:none;
+    color:rgb(138, 137, 140);
+    background-color: rgb(251, 252, 252);
+}
+.g-btn:hover{
+    background-color: #f0e9e9;
+}
+.google-sign button img{
+    width: 20px;
+    height: 22px;
+    padding-left: 32px;
+} 
+.separator-div{
+   padding-left: 100px;
+    width:300px;
+    margin: 0;
+}
+.separator{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+.separator::before,
+.separator::after {
+    content: "";
+    flex: 1;
+    border-bottom: 1px solid #9a8b8b; 
+}
+
+.separator::before {
+    margin-right: 10px;
+}
+
+.separator::after {
+    margin-left: 10px;
+}
+
+.separator span {
+    color: #5b5151; 
+    font-size: 14px;
+}
+.input-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.input-box .user{
+    height: 20px;
+    position: absolute;
+    top: 9px;
+    right: 100px;
+
+}
+.input-box .password{
+    height: 20px;
+    position: absolute;
+    top: 65px;
+    right: 100px;
+
+}
+.input-box input{
+   padding: 10px;
+   width: 300px;
+   border-radius: 12px;
+  border: none;
+  color: rgb(54, 54, 52);
+  background-color: rgb(251, 252, 252);
+}
+
+.input-field::placeholder{
+   font-size: larger;
+   color: rgb(132, 134, 133);
+}
+.sign-up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+}
+.sign-up a{
+text-decoration: none;
+color: rgb(52, 47, 34);
+}
+.sign-up a:hover{
+    text-decoration: underline;
+}
+.sign-up p a{
+margin-left: 66px;
+}
+.log-in{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.log-in button{
+padding: 10px;
+border-radius: 19px;
+width:300px ;
+border: none;
+color: rgb(238, 245, 242);
+background-color: rgb(103, 103, 95);
+font-size: 21px;
+cursor: pointer;
+}
+.log-in button:hover{
+    background-color: #898585;
+}
+
