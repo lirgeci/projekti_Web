@@ -1,0 +1,222 @@
+body {
+  margin: 0;
+  font-family: "Cormorant Garamond", serif;
+  background-color: #faf9f7;
+  color: #4a3f3f;
+}
+
+/* Headeri */
+
+.nav {
+  background-color: rgba(227, 210, 179, 0.916);
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navdiv ul {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 36px;
+  letter-spacing: 3px;
+}
+
+.navdiv ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.navdiv ul li h2 a {
+  font-size: 34px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.navdiv ul li a:hover {
+  color: rgb(206, 172, 114);
+}
+
+.navdiv ul li h2 a:hover {
+  color: rgb(206, 172, 114);
+}
+
+.projects-intro {
+  text-align: center;
+  font-size: 22px;
+  color: #7a5a5a;
+  margin: 60px auto 40px;
+  padding: 0 20px;
+  max-width: 900px;
+  line-height: 1.8;
+}
+
+/* Projects Grid */
+
+.projects-grid {
+  max-width: 1200px;
+  margin: 0 auto 80px;
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.12);
+}
+
+.project-card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  font-size: 28px;
+  margin: 20px 10px 5px;
+}
+
+.project-card p {
+  font-size: 18px;
+  margin-bottom: 25px;
+  color: #926c6c;
+}
+
+/* About Our Projects */
+
+.about-projects {
+  max-width: 900px;
+  margin: 60px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.about-projects h2 {
+  font-size: 40px;
+  margin-bottom: 30px;
+  color: #4a3f3f;
+}
+
+.about-projects p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #7a5a5a;
+  margin-bottom: 20px;
+}
+
+/* ===== Our Design Process ===== */
+
+.process {
+  background-color: rgba(227, 210, 179, 0.3);
+  padding: 80px 20px 120px;
+  text-align: center;
+}
+
+.process h2 {
+  font-size: 44px;
+  margin-bottom: 40px;
+  letter-spacing: 2px;
+}
+
+.process-steps {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.step {
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  max-width: 320px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  text-align: left;
+}
+
+.step span {
+  display: inline-block;
+  font-size: 26px;
+  font-weight: bold;
+  color: #ceac72;
+  margin-bottom: 10px;
+}
+
+.step h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.step p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #7a5a5a;
+}
+
+/* Footeri */
+
+.footer {
+   background-color: #4a3f3f;
+  color: rgba(227, 210, 179, 0.95);
+  font-family: "Cormorant Garamond", serif;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 5px 50px;
+  gap: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}
+
+.footer-column h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #ceb0b0;
+}
+
+.footer-column p,
+a {
+  font-size: 16px;
+  margin: 5px;
+  color: #ceb0b0;
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  color: #ceac72;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 5px;
+  font-size: 15px;
+  border-top: 1px solid rgba(198, 193, 193, 0.5);
+  color: #ceb0b0;
+}
