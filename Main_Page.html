@@ -1,150 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Istudio</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap"
-      rel="stylesheet"
-    />
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Istudio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet" />
 
-  <body>
-    <header>
-      <nav class="nav">
-          <ul>
-            <li><a href="#"> PROFILE </a></li>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-            <li><a href="#">INTERIORS</a></li>
-            <li>
-              <h2><a href="#">iSTUDIO</a></h2>
-            </li>
-            <li><a href="#">PRODUCTS</a></li>
-            <li><a href="#">CONTACT</a></li>
-          </ul>
-      </nav>
-    </header>
-    <br>
-    <br>
-    <div class="layout">
-      <p class="istudio-info">
-        ISTUDIO is a contemporary boutique interior design studio specializing
-        in creating refined, functional, and visually balanced spaces. We
-        deliver fully tailored design solutions for residential, commercial, and
-        product design projects, blending modern aesthetics with thoughtful
-        architectural detail.
-      </p>
-      <br />
-      <br />
+<body>
+  <header>
+    <nav class="nav">
+      <ul>
+        <li><a href="#"> PROFILE </a></li>
 
-      <div class="container">
-        <div class="contents">
-          <h2 style="font-family: none">Save time</h2>
-          <img src="tick.png" alt="" style="width: 50px" />
-          <p>
-            A little planning goes a long way. Simple tools can turn hours of
-            work into minutes, letting creativity flow effortlessly.
-          </p>
-        </div>
-        <div class="contents">
-          <h2 style="font-family: none">Measuring Success</h2>
-          <img src="rulerpen.png" alt="" style="width: 50px" />
+        <li><a href="#">INTERIORS</a></li>
+        <li>
+          <h2><a href="#">iSTUDIO</a></h2>
+        </li>
+        <li><a href="#">PRODUCTS</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </ul>
+    </nav>
+    <a href="signup.html">
+    <button type="submit">Start your transformation</button></a>
 
-          <p>
-            A pencil and ruler are the beginning of every design. They help turn
-            ideas into plans to shape spaces that truly work.
-          </p>
-        </div>
-        <div class="contents">
-          <h2 style="font-family: none">Bright Details</h2>
-          <img src="light.png" />
+  </header>
+  <br>
+  <br>
+  <div class="layout">
+    <p class="istudio-info">
+      ISTUDIO is a contemporary boutique interior design studio specializing
+      in creating refined, functional, and visually balanced spaces. We
+      deliver fully tailored design solutions for residential, commercial, and
+      product design projects, blending modern aesthetics with thoughtful
+      architectural detail.
+    </p>
+    <br />
+    <br />
 
-          <p>
-            From desk to lounge, the right lamp adds style to every interior.
-            Lighting isn’t just functional—it’s the heart of your space.
-          </p>
-        </div>
+    <div class="container">
+      <div class="contents">
+        <h2 style="font-family: none">Save time</h2>
+        <img src="tick.png" alt="" style="width: 50px" />
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, deleniti!
+        </p>
       </div>
+      <div class="contents">
+        <h2 style="font-family: none">Measuring Success</h2>
+        <img src="rulerpen.png" alt="" style="width: 50px" />
 
-      <!--qitu ja nis carousel-->
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum, reiciendis!
+        </p>
+      </div>
+      <div class="contents">
+        <h2 style="font-family: none">Bright Details</h2>
+        <img src="light.png" />
 
-      <div class="carousel">
-        <div class="slides">
-          <img src="slider1.png" class="slide" />
-          <img src="slider3.png" class="slide" />
-          <img src="slider4.png" class="slide" />
-        </div>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. In, consequuntur.
+        </p>
+      </div>
+    </div>
+ </div>
+ <br>
+ <br>
+ <br>
+     <!--Qitu fillon happy customer reviews-->
 
-        <button class="btn prev">❮</button>
-        <button class="btn next">❯</button>
+  <div class="reviews" >
+
+    <div class="karta">
+      <p>"Absolutely loved it—exceeded all my expectations!"</p>
+      <div class="autori">
+        <img src="autori.jpg" alt="autori" srcset="">
+        <h4>Andy Sa.</h4>
+        <span>CEO, Insurance Company</span>
       </div>
     </div>
 
-    <script>
-      let index = 0;
-      const slides = document.querySelector(".slides");
-      const total = document.querySelectorAll(".slide").length;
+    <div class="karta">
+      <p>"Turned my vision into reality effortlessly!"</p>
+      <div class="autori">
+        <img src="ppl1.jpg" alt="autori" srcset="">
+        <h4>Deborah Th.</h4>
+        <span>CEO, Insurance Company</span>
+      </div>
+    </div>
 
-      function showSlide() {
-        slides.style.transform = `translateX(-${index * 100}%)`;
-      }
+    <div class="karta">
+      <p>"From concept to completion, they nailed it!"</p>
+      <div class="autori">
+        <img src="ppl2.jpg" alt="autori" srcset="">
+        <h4>Thomas Co.</h4>
+        <span>CEO, Insurance Company</span>
+      </div>
+    </div>
 
-      document.querySelector(".next").onclick = () => {
-        index = (index + 1) % total;
-        showSlide();
-      };
+    <div class="karta">
+      <p>"Innovative ideas with a personal touch!"</p>
+      <div class="autori">
+        <img src="ppl3.jpg" alt="autori" srcset="">
+        <h4>Aria Mo.</h4>
+        <span>CEO, Insurance Company</span>
+      </div>
+    </div>
+    
+  </div>
 
-      document.querySelector(".prev").onclick = () => {
-        index = (index - 1 + total) % total;
-        showSlide();
-      };
-    </script>
+   <!--qitu ja nis carousel-->
 
-    <!--qitu ja nis footeri-->
+    <div class="carousel">
+      <div class="slides">
+        <img src="slider1.png" class="slide" />
+        <img src="slider3.png" class="slide" />
+        <img src="slider4.png" class="slide" />
+      </div>
 
-    <footer class="footer">
-      <div class="footer-top">
-        <div class="footer-column">
-          <h3>iSTUDIO</h3>
-          <p>
-            Creating refined, functional, and visually balanced interior designs
-            for residential, commercial, and product projects.
-          </p>
-        </div>
+      <button class="btn prev">❮</button>
+      <button class="btn next">❯</button>
+    </div>
+ 
 
-        <div class="footer-column">
-          <h3>Contact</h3>
-          <p>Email: info@istudio.com</p>
-          <p>Phone: +383 44 123 456</p>
-        </div>
+  <script>
+    let index = 0;
+    const slides = document.querySelector(".slides");
+    const total = document.querySelectorAll(".slide").length;
 
-        <div class="footer-column">
-          <h3>Customer Service</h3>
+    function showSlide() {
+      slides.style.transform = `translateX(-${index * 100}%)`;
+    }
 
-          <div id="paragrafi">
-            <p>FAQ</p>
-            <p>Shipping Info</p>
-            <p>Returns & Exchanges</p>
-            <p>Payment Options</p>
-            <p>Contact Support</p>
-          </div>
-        </div>
+    document.querySelector(".next").onclick = () => {
+      index = (index + 1) % total;
+      showSlide();
+    };
 
-        <div class="footer-column">
-          <h3>Follow Us</h3>
-          <p>
-            <a href="#">Instagram</a> | <a href="#">Facebook</a> |
-            <a href="#">Pinterest</a>
-          </p>
+    document.querySelector(".prev").onclick = () => {
+      index = (index - 1 + total) % total;
+      showSlide();
+    };
+  </script>
+
+
+  <!--qitu ja nis footeri-->
+
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-column">
+        <h3>iSTUDIO</h3>
+        <p>
+          Creating refined, functional, and visually balanced interior designs
+          for residential, commercial, and product projects.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <p>Email: info@istudio.com</p>
+        <p>Phone: +383 44 123 456</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Customer Service</h3>
+
+        <div id="paragrafi">
+          <p>FAQ</p>
+          <p>Shipping Info</p>
+          <p>Returns & Exchanges</p>
+          <p>Payment Options</p>
+          <p>Contact Support</p>
         </div>
       </div>
 
-      <div class="footer-bottom">
-        <p>© 2025 iSTUDIO. All rights reserved.</p>
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <p>
+          <a href="#">Instagram</a> | <a href="#">Facebook</a> |
+          <a href="#">Pinterest</a>
+        </p>
       </div>
-    </footer>
-  </body>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 iSTUDIO. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+
 </html>

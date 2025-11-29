@@ -1,11 +1,41 @@
-*{
-    font-family: 'Cormorant Garamond', serif;
+* {
+  font-family: 'Cormorant Garamond', serif;
 }
+
 body {
   margin: 0;
-  
+
 }
+
+header button {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding-inline: 40px;
+  padding-block: 10px;
+  border-radius: 15px;
+  border: none;
+  font-family: 'Poppins', 'Helvetica', sans-serif;
+  font-size: large;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #8f7474;
+  background-color: #eddfc4;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+header button:hover {
+  background-color: #f7eed0;
+  transform: translate(-50%, -50%) scale(1.05);
+  /*pop effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
 header {
+  position: relative;
   background-image: url("fotoL.png");
   width: 100%;
   height: 600px;
@@ -20,6 +50,7 @@ header {
   display: flex;
   justify-content: center;
 }
+
 .nav ul {
   list-style: none;
   display: flex;
@@ -45,31 +76,40 @@ header {
 
 .nav ul li h2 a:hover {
   color: rgb(206, 172, 114);
-  font-size: 50px;
+  /* font-size: 50px;*/
 }
+
 .nav ul li a:hover {
   color: rgb(206, 172, 114);
-  font-size: 25px;
+  /* font-size: 25px;*/
 }
-.nav ul li h2 a:active{
-  color:#ffffff
+
+.nav ul li h2 a:active {
+  color: #ffffff
 }
-.nav ul li a:active{
-  color:#ffffff
+
+.nav ul li a:active {
+  color: #ffffff
 }
+
 .layout {
   padding-left: 100px;
   padding-right: 100px;
 }
+
 .istudio-info {
   font-size: 30px;
   text-align: center;
   color: #926c6c;
 }
+
 .container {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  /*
+  flex-direction: row;*/
 }
+
 .contents {
   color: #926c6c;
   padding: 20px;
@@ -78,6 +118,9 @@ header {
   border-radius: 5%;
   text-align: center;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.105);
+  flex: 1 1 200px;
+  /* secila merr min 200px */
+
 }
 
 .contents:hover {
@@ -132,6 +175,7 @@ header {
 .prev {
   left: 10px;
 }
+
 .next {
   right: 10px;
 }
@@ -140,13 +184,72 @@ header {
   background: rgba(255, 255, 255, 0.9);
 }
 
+/*Happy customer Reviews*/
 
+.reviews {
+  background: url("Review.jpg") center/cover no-repeat;
+  padding: 80px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /*tlejon me i bo 2 kolona*/
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.karta {
+  background: white;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Autori */
+.autori {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Foto e autorit */
+.autori img {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* Info e autorit */
+.autori h4 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.autori span {
+  font-size: 14px;
+  color: #777;
+}
+
+
+@media screen and (max-width: 768px) {
+  .reviews {
+    grid-template-columns: 1fr;
+    /* 1 kolon ntablet a tel */
+    padding: 40px;
+    /* pading ma i vogel */
+    gap: 30px;
+    /* less gap mes rreshtav*/
+  }
+}
 
 /* footer */
 
 .footer {
-  background-color: rgba(227, 210, 179, 0.95);
-  color: #4a3f3f;
+  background-color: #4a3f3f;
+  color: rgba(227, 210, 179, 0.95);
   font-family: "Cormorant Garamond", serif;
 }
 
@@ -168,14 +271,14 @@ header {
 .footer-column h3 {
   font-size: 22px;
   margin-bottom: 15px;
-  color: #926c6c;
+  color: #ceb0b0;
 }
 
 .footer-column p,
 a {
   font-size: 16px;
   margin: 5px;
-  color: #4a3f3f;
+  color: #ceb0b0;
   text-decoration: none;
 }
 
@@ -188,5 +291,5 @@ a {
   padding: 5px;
   font-size: 15px;
   border-top: 1px solid rgba(198, 193, 193, 0.5);
-  color: #4a3f3f;
+  color: #ceb0b0;
 }
