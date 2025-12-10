@@ -62,9 +62,7 @@ header {
     margin-right: 40px;
     margin-bottom: 30px;
     margin-top: 60px;
-    /*background-color: rgb(217, 214, 209);*/
     color: rgb(124, 118, 100);
-    /*120 119 117*/
     display: flex;
     flex-direction: row;
     background-color: rgba(227, 210, 179, 0.916);
