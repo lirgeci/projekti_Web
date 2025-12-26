@@ -180,4 +180,19 @@ cursor: pointer;
 .log-in button:hover{
     background-color: #898585;
 }
-
+#mesazhi{
+        color: rgb(241, 81, 81);
+        font-size: 11px;
+        margin-left:40px;
+        margin-right: 40px;
+    }
+    #mesazhi1{
+          color: rgb(241, 81, 81);
+        font-size: 11px;
+        margin-right: 150px;
+    }
+    #mesazhi2{
+          color: rgb(241, 81, 81);
+        font-size: 11px;
+        margin-right: 150px;
+    }

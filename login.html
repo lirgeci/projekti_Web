@@ -18,7 +18,7 @@
    
     <div class="login-container">
         <div class="form-box">
-            <form action="">
+             <form action="" onsubmit="return Validate()" novalidate>
                 <div class="welcome-sign">
                     <h3>WELCOME BACK!</h3>
                     <p>Log in to your account</p>
@@ -39,22 +39,27 @@
 
                 <br><br>
                 <div class="input-box">
-                    <input type="text" placeholder="Username" class="input-field" required> <br> 
-                    <input type="password" placeholder="Password" class="input-field" required>
-              <br>
+                    <input type="text" id="user" placeholder="Username" class="input-field" required> 
+                     <p id="mesazhi1" ></p> 
+                    <input type="password" id="password" placeholder="Password" class="input-field" required>
+               <p id="mesazhi2" ></p>     
+                </div>
+                <div>
+                 <p id="mesazhi" ></p> <br> 
                 </div>
                 <div class="sign-up">
+            
                     <p>Don't have an account ? <a href="signup.html">Sign Up!</a></p>
                 
                 </div>
                 <div class="log-in">
-                    
                     <button type="submit">Login</button>
                 </div>
 
             </form>
         </div>
   </div>
+  <script src="login.js"></script>
 </body>
 
 </html>
