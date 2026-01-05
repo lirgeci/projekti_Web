@@ -185,3 +185,11 @@ header {
 p a {
   margin-left: 66px;
 }
+
+#mesazhiName, #mesazhiEmail, #mesazhiPassword, #mesazhiConfirm {
+    color: rgb(241, 81, 81);
+    font-size: 11px;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 2px;
+}
