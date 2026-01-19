@@ -140,6 +140,24 @@ body {
   background-color: #b8955c;
 }
 
+
+.error-style {
+    color: rgb(241, 81, 81); 
+    font-size: 11px;
+    margin-top: -10px; 
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left;
+    min-height: 15px;
+}
+
+.contact-form form input, 
+.contact-form form textarea {
+    margin-bottom: 12px;
+}
+
+
+
 /* Footeri */
 
 .footer {
