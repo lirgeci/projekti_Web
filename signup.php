@@ -1,3 +1,13 @@
+<?php 
+require_once('users.php');
+if (isset($_POST['save'])){
+    $u= new User();
+$u->setName($_POST['FullName']);
+$u->setEmail($_POST['Email']);
+$u->setPassword($_POST['Password']);
+$u->insert();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,7 +24,7 @@
         <nav class="nav">
             <div class="navdiv">
                 <ul type="none">
-                    <li> <a href="#">iSTUDIO</a></li>
+                    <li> <a href="index.html">iSTUDIO</a></li>
                 </ul>
             </div>
         </nav>
@@ -23,7 +33,7 @@
 
     <div class="signup-container">
         <div class="form-box">
-            <form action="" onsubmit="return ValidateSignup()" novalidate>
+            <form action="" onsubmit="return ValidateSignup()" method="POST" novalidate>
                 <div class="welcome-sign">
                     <h3>LET'S GET STARTED!</h3>
                     <p>Bring your dream ambient to life</p>
@@ -46,13 +56,13 @@
 
 
                <div class="input-box">
-                    <input type="text" id="fullname" placeholder="Full Name" class="input-field" required>
+                    <input type="text" id="fullname" placeholder="Full Name"  name="FullName" class="input-field" required>
                     <p id="mesazhiName"></p>
 
-                    <input type="email" id="email" placeholder="Email" class="input-field" required>
+                    <input type="email" id="email" placeholder="Email" name="Email" class="input-field" required>
                     <p id="mesazhiEmail"></p>
 
-                    <input type="password" id="password" placeholder="Password" class="input-field" required>
+                    <input type="password" id="password" placeholder="Password" name="Password" class="input-field" required>
                     <p id="mesazhiPassword"></p>
 
                     <input type="password" id="confirmPassword" placeholder="Confirm Password" class="input-field" required>
@@ -66,7 +76,7 @@
                 </div>
                 <div class="log-in">
                     
-                    <button type="submit">Sign Up</button>
+                    <button type="submit" name="save">Sign Up</button>
                 </div>
 
             </form>
