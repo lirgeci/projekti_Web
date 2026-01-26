@@ -1,12 +1,16 @@
 <?php
 require_once('users.php');
 require_once('project.php');
+require_once('service.php'); // Shtova
 
 $useri = new User();
 $all = $useri->read();
 
 $projekti = new Project();
 $allProjects = $projekti->read();
+
+$sherbimi = new Service(); // Kri
+$allServices = $sherbimi->read(); // Merri
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +28,7 @@ $allProjects = $projekti->read();
     <nav class="nav">
     
         <ul type="none">
-          <li> <a href="services.html">SERVICES</a></li>
+          <li> <a href="services.php">SERVICES</a></li>
           <li>
             <a href="projects.php">PROJECTS</a>
 
@@ -67,27 +71,54 @@ foreach($all as $key=>$value){
 }
 ?>
 
-   </table>
-<br><br><br><br><br>
-    <table border="1" class="tabela">
+   <table border="1" class="tabela">
+    <br><br><br><br><br>
     <tr>
-        <th id="thUsers" colspan="3">Services</th>
+        <th id="thUsers" colspan="4">Services 
+            <a href="add_service.php" style="float:right; text-decoration:none;">
+                <button style="padding:5px 15px; background:#4CAF50; color:white; border:none; border-radius:4px; cursor:pointer;">+ Add Service</button>
+            </a>
+        </th>
     </tr>
     <tr>
         <th>ServicesID</th>
         <th>Name</th>
-       
         <th>Price</th>
-        
+        <th>Action</th>
     </tr>
+    
+    <?php
+    if(!empty($allServices)){
+        foreach($allServices as $key => $value){
+    ?>
     <tr>
-        <th>1</th>
-        <th>Anesa</th>
-       
-        <th>Prishtina</th>
-       
+        <td><?php echo $value['ServiceID']?></td>
+        <td><?php echo $value['ServiceName']?></td>
+        <td><?php echo $value['Price']?> &euro;</td>
+        <td id='de'>
+            <a href="delete_service.php?ServiceID=<?php echo $value['ServiceID']?>">
+                <button id="d">DELETE</button>
+            </a>
+            <a href="edit_service.php?ServiceID=<?php echo $value['ServiceID']?>">
+                <button id='e'>EDIT</button>
+            </a>
+        </td>
     </tr>
-   </table>
+    <?php
+        }
+    } else {
+    ?>
+    <tr>
+        <td colspan="4" style="text-align:center; padding:20px;">Nuk ka shërbime të regjistruara.</td>
+    </tr>
+    <?php
+    }
+    ?>
+</table>
+
+
+
+
    <br><br><br><br><br>
     <table border="1" class="tabela">
     <tr>

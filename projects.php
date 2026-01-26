@@ -21,10 +21,10 @@ $allProjects = $projekti->read();
     <nav class="nav">
     
         <ul type="none">
-          <li> <a href="services.html">SERVICES</a></li>
+          <li> <a href="services.php">SERVICES</a></li>
           <li>
             <h2>
-              <a href="#">PROJECTS</a>
+              <a href="projects.php">PROJECTS</a>
             </h2>
           </li>
           <li><a href="index.html">iSTUDIO</a></li>
