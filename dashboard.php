@@ -1,7 +1,12 @@
 <?php
 require_once('users.php');
-$useri =new User();
-$all=$useri->read();
+require_once('project.php');
+
+$useri = new User();
+$all = $useri->read();
+
+$projekti = new Project();
+$allProjects = $projekti->read();
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +26,7 @@ $all=$useri->read();
         <ul type="none">
           <li> <a href="services.html">SERVICES</a></li>
           <li>
-            <a href="projects.html">PROJECTS</a>
+            <a href="projects.php">PROJECTS</a>
 
           </li>
           <li>
@@ -86,21 +91,41 @@ foreach($all as $key=>$value){
    <br><br><br><br><br>
     <table border="1" class="tabela">
     <tr>
-        <th id="thUsers" colspan="3">Projects</th>
+        <th id="thUsers" colspan="4">Projects 
+            <a href="add_project.php" style="float:right; text-decoration:none;">
+                <button style="padding:5px 15px; background:#4CAF50; color:white; border:none; border-radius:4px; cursor:pointer;">+ Add Project</button>
+            </a>
+        </th>
     </tr>
     <tr>
-        <th>ProjectID</th>
-        <th>Name</th>
-        <th>Description</th>
-       
+        <th>Project Name</th>
+        <th>Category</th>
+        <th>Photo</th>
+        <th>Action</th>
     </tr>
+    <?php
+    if(!empty($allProjects)){
+        foreach($allProjects as $key => $value){
+    ?>
     <tr>
-        <th>1</th>
-        <th>Anesa</th>
-        <th>Leci</th>
-       
+        <td><?php echo $value['ProjectName']?></td>
+        <td><?php echo $value['Category']?></td>
+        <td><?php echo $value['Photo']?></td>
+        <td id='de'>
+            <a href="delete_project.php?ProjectID=<?php echo $value['ProjectID']?>"><button id="d">DELETE</button></a>
+            <a href="edit_project.php?ProjectID=<?php echo $value['ProjectID']?>"><button id='e'>EDIT</button></a>
+        </td>
     </tr>
-   
+    <?php
+        }
+    } else {
+    ?>
+    <tr>
+        <td colspan="4" style="text-align:center; padding:20px;">No projects yet. Click "+ Add Project" to create one.</td>
+    </tr>
+    <?php
+    }
+    ?>
    </table>
    <br><br><br>
   </div>

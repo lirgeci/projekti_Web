@@ -1,3 +1,8 @@
+<?php 
+require_once('project.php');
+$projekti = new Project();
+$allProjects = $projekti->read();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,6 +41,7 @@
 
   <!-- Projects Grid -->
   <div class="projects-grid">
+    <!-- Hardcoded Original Projects -->
     <div class="project-card">
       <img src="foto1(projects).png" alt="" />
       <h3>Modern Living Space</h3>
@@ -71,6 +77,21 @@
       <h3>Creative Workspace</h3>
       <p>Commercial · Berlin</p>
     </div>
+
+    <!-- Dynamic Projects from Database -->
+    <?php
+    if(!empty($allProjects)){
+        foreach($allProjects as $project){
+    ?>
+    <div class="project-card">
+      <img src="<?php echo $project['Photo']; ?>" alt="<?php echo $project['ProjectName']; ?>" />
+      <h3><?php echo $project['ProjectName']; ?></h3>
+      <p><?php echo $project['Category']; ?></p>
+    </div>
+    <?php
+        }
+    }
+    ?>
   </div>
 
   <!-- About Projects -->
@@ -118,39 +139,43 @@
         <p>
           During the consultation phase, we meet with our clients to
           understand their needs, preferences, and lifestyle. We discuss
-          ideas, explore inspirations, and identify the key goals of the
-          project. This step ensures that every project is tailored to the
-          client’s vision and expectations.
+          budget, timeline, and vision to ensure we're aligned.
         </p>
       </div>
 
       <div class="step">
         <span>02</span>
-        <h3>Planning</h3>
+        <h3>Concept Development</h3>
         <p>
-          In the planning stage, we develop detailed concepts and layouts. Our
-          team creates sketches, 3D models, and mood boards to visualize the
-          design. We consider spatial arrangements, materials, lighting, and
-          budget to ensure the project is feasible, functional, and
-          aesthetically pleasing.
+          Our designers create detailed mood boards, sketches, and 3D
+          visualizations to present the concept. This phase allows clients to
+          see and refine their space before execution.
         </p>
       </div>
 
       <div class="step">
         <span>03</span>
+        <h3>Material Selection</h3>
+        <p>
+          We source high-quality materials, furniture, and fixtures that
+          match the design concept and client preferences. Every selection is
+          made to ensure durability and aesthetic excellence.
+        </p>
+      </div>
+
+      <div class="step">
+        <span>04</span>
         <h3>Execution</h3>
         <p>
-          During execution, our designers and contractors bring the project to
-          life. We manage every detail, from sourcing materials to overseeing
-          construction and installation. The focus is on quality, precision,
-          and achieving a final result that not only looks stunning but also
-          provides lasting functionality and comfort.
+          Our experienced team brings the design to life with precision and
+          attention to detail. We manage timelines and budgets to ensure
+          smooth project completion.
         </p>
       </div>
     </div>
   </div>
 
-  <!-- Footeri -->
+  <!-- Footer -->
   <footer class="footer">
     <div class="footer-top">
       <div class="footer-column">
