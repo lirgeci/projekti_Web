@@ -1,3 +1,27 @@
+<?php
+session_start();
+require_once('users.php');
+
+$error_message = '';
+
+if(isset($_POST['login'])){
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    
+    $u = new User();
+    $result = $u->login($email, $password);
+    
+    if($result){
+        $_SESSION['user_id'] = $result['UserID'];
+        $_SESSION['user_name'] = $result['FullName'];
+        $_SESSION['user_email'] = $result['Email'];
+        header('Location: index.php');
+        exit();
+    } else {
+        $error_message = 'Invalid email or password. Please try again or sign up first.';
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,20 +36,20 @@
 <body>
         <nav class="nav">
                 <ul type="none"> 
-                    <li> <a href="index.html">iSTUDIO</a></li>
+                    <li> <a href="#">iSTUDIO</a></li>
                 </ul>   
         </nav>
    
     <div class="login-container">
         <div class="form-box">
-             <form action="" onsubmit="return Validate()" novalidate>
+             <form action="" method="POST" onsubmit="return Validate()" novalidate>
                 <div class="welcome-sign">
                     <h3>WELCOME BACK!</h3>
                     <p>Log in to your account</p>
                     <br>
                 </div>
                 <div class="google-sign">
-                    <button type="submit" class="g-btn">
+                    <button type="button" class="g-btn">
                         <img src="icons8-google-50 (1).png" alt="">
                         Sign in with Google</button>
 
@@ -39,21 +63,21 @@
 
                 <br><br>
                 <div class="input-box">
-                    <input type="text" id="user" placeholder="Username" class="input-field" required> 
+                    <input type="email" id="user" name="email" placeholder="Email" class="input-field" required> 
                      <p id="mesazhi1" ></p> 
-                    <input type="password" id="password" placeholder="Password" class="input-field" required>
+                    <input type="password" id="password" name="password" placeholder="Password" class="input-field" required>
                <p id="mesazhi2" ></p>     
                 </div>
                 <div>
-                 <p id="mesazhi" ></p> <br> 
+                 <p id="mesazhi" style="color: red;"><?php echo $error_message; ?></p> <br> 
                 </div>
                 <div class="sign-up">
             
-                    <p>Don't have an account ? <a href="signup.html">Sign Up!</a></p>
+                    <p>Don't have an account ? <a href="signup.php">Sign Up!</a></p>
                 
                 </div>
                 <div class="log-in">
-                    <button type="submit">Login</button>
+                    <button type="submit" name="login">Login</button>
                 </div>
 
             </form>

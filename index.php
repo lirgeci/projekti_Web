@@ -21,14 +21,14 @@
 
           </li>
           <li>
-            <h2><a href="index.html">iSTUDIO</a></h2>
+            <h2><a href="index.php">iSTUDIO</a></h2>
           </li>
-          <li><a href="aboutus.html">ABOUT US</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="aboutus.php">ABOUT US</a></li>
+          <li><a href="contact.php">CONTACT</a></li>
         </ul>
     
     </nav>
-    <a href="signup.html">
+    <a href="signup.php">
       <button type="submit">Start your transformation</button></a>
   </header>
   <br />

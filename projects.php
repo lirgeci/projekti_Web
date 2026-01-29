@@ -27,9 +27,9 @@ $allProjects = $projekti->read();
               <a href="projects.php">PROJECTS</a>
             </h2>
           </li>
-          <li><a href="index.html">iSTUDIO</a></li>
-          <li><a href="aboutus.html">ABOUT US</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="index.php">iSTUDIO</a></li>
+          <li><a href="aboutus.php">ABOUT US</a></li>
+          <li><a href="contact.php">CONTACT</a></li>
         </ul>
      
     </nav>

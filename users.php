@@ -32,7 +32,7 @@ public function getName(){
 public function setEmail($email){
 $this->email=$email;
 }
-public function getemail(){ 
+public function getEmail(){
 return $this->email;
 }
 public function setPassword($password){
@@ -48,8 +48,7 @@ public function insert(){
     $stm->execute([$this->name,$this->email,$this->password]);
     echo"<script>
 alert('Info successfully inserted'); 
-window.location.href = 'index.html';
-
+window.location.href = 'home.html';
 </script>";
 }
 
@@ -68,15 +67,10 @@ $sql="DELETE FROM users WHERE UserID=:id";
 $stm=$this->dbconn->prepare($sql);
 $stm->bindParam(':id',$id);
 $stm->execute();
-if ($stm==true){ 
 echo "<script>
 alert('Data successfully deleted!'); 
 window.location.href = 'dashboard.php';
 </script>";
-}
-else {
-return false;
-}
 }
 
 
@@ -96,6 +90,18 @@ $stm->execute([$this->name,
         $this->email,
         $this->password,
         $this->id]);
+}
+
+public function login($email, $password){
+    $sql='SELECT * FROM users WHERE Email=?';
+    $stm=$this->dbconn->prepare($sql);
+    $stm->execute([$email]);
+    $user = $stm->fetch(PDO::FETCH_ASSOC);
+    
+    if($user && $user['Password'] === $password){
+        return $user;
+    }
+    return false;
 }
     
 }

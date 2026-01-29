@@ -24,7 +24,7 @@ $u->insert();
         <nav class="nav">
             <div class="navdiv">
                 <ul type="none">
-                    <li> <a href="index.html">iSTUDIO</a></li>
+                    <li> <a href="index.php">iSTUDIO</a></li>
                 </ul>
             </div>
         </nav>
@@ -71,7 +71,7 @@ $u->insert();
 
 
                 <div class="log-in">
-                    <p>Already have an account ? <a href="login.html">Login!</a></p>
+                    <p>Already have an account ? <a href="login.php">Login!</a></p>
                 
                 </div>
                 <div class="log-in">

@@ -19,9 +19,9 @@ $allServices = $serviceObj->read();
             <ul>
                 <li><h2><a href="services.php">SERVICES</a></h2></li>
                 <li><a href="projects.php">PROJECTS</a></li>
-                <li><a href="index.html">iSTUDIO</a></li>
-                <li><a href="aboutus.html">ABOUT US</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
+                <li><a href="index.php">iSTUDIO</a></li>
+                <li><a href="aboutus.php">ABOUT US</a></li>
+                <li><a href="contact.php">CONTACT</a></li>
             </ul>
         </nav>
 
@@ -72,7 +72,47 @@ $allServices = $serviceObj->read();
         </div>
     </div>
 
-    <footer class="footer">
-        </footer>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-column">
+        <h3>iSTUDIO</h3>
+        <p>
+          Creating refined, functional, and visually balanced interior designs
+          for residential, commercial, and product projects.
+        </p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Contact</h3>
+        <p>Email: info@istudio.com</p>
+        <p>Phone: +383 44 123 456</p>
+      </div>
+
+      <div class="footer-column">
+        <h3>Customer Service</h3>
+
+        <div id="paragrafi">
+          <p>FAQ</p>
+          <p>Shipping Info</p>
+          <p>Returns & Exchanges</p>
+          <p>Payment Options</p>
+          <p>Contact Support</p>
+        </div>
+      </div>
+
+      <div class="footer-column">
+        <h3>Follow Us</h3>
+        <p>
+          <a href="#">Instagram</a> | <a href="#">Facebook</a> |
+          <a href="#">Pinterest</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2025 iSTUDIO. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>

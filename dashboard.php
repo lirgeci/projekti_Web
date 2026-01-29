@@ -36,9 +36,9 @@ $allServices = $sherbimi->read(); // Merri
           <li>
             <h2><a href="#">iSTUDIO</a></h2>
           </li>
-          <li><a href="aboutus.html">ABOUT US</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
-          <li id="D"><a href="da.html">DASHBOARD</a></li>
+          <li><a href="aboutus.php">ABOUT US</a></li>
+          <li><a href="contact.php">CONTACT</a></li>
+          <li id="D"><a href="da.php">DASHBOARD</a></li>
         </ul>
     
     </nav>

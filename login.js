@@ -18,23 +18,21 @@ function Validate(){
     let errorsUser=null;
     let errorsPass=null;
     let error1=null;
-    let regex1=/^[a-zA-Z0-9._-]{6,}$/;
-    let regex2=/^(?=.*[\d])(?=.*[!@#$%])[a-zA-Z\d!@#$%]{8,}$/;
+    let regex1=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if(user.value==""){
-        errorsUser='Please enter your username';
+        errorsUser='Please enter your email';
         error1=user;
     }else if(!(regex1.test(user.value))){
-        errorsUser='Username must be atleast 6 characters';
+        errorsUser='Please enter a valid email address';
         error1=user;
-    } if(psw.value==""){
+    }
+   
+    if(psw.value==""){
          errorsPass='Please enter your password';
         error1=psw;
-    }else if(!(regex2.test(psw.value))){
-         errorsPass='Password must be atleast 12 characters, 1 symbol and 1 digit';
-        error1=psw;
     }
-    if(errorsUser!=null & errorsPass!=null){
+    if(errorsUser!=null && errorsPass!=null){
         errors=errorsUser+ " and "+errorsPass;
         var mesazhi = document.getElementById('mesazhi').innerText=errors;
         error1=user;
@@ -57,3 +55,4 @@ function Validate(){
 
     return true;
 }
+

@@ -19,9 +19,9 @@
               <a href="projects.php">PROJECTS</a>
             
           </li>
-          <li><a href="index.html">iSTUDIO</a></li>
+          <li><a href="index.php">iSTUDIO</a></li>
           <li><a class="big" href="#">ABOUT US</a></li>
-          <li><a href="contact.html">CONTACT</a></li>
+          <li><a href="contact.php">CONTACT</a></li>
         </ul>
      
     </nav>
