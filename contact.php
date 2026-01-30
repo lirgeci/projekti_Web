@@ -1,5 +1,20 @@
 <?php
 session_start();
+require_once('contactsCrud.php');
+
+if(isset($_POST['send'])){
+    if(isset($_SESSION['user_id'])){ // siguro që useri është i loguar
+        $c = new Contacts();
+        $c->setName($_POST['Name']);
+        $c->setEmail($_POST['Email']);
+        $c->setMessage($_POST['Message']);
+        $c->setUserID($_SESSION['user_id']); // kjo është thelbësore
+        $c->insert();
+    } else {
+        echo "<script>alert('You must be logged in to send a message');</script>";
+    }
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -57,11 +72,11 @@ session_start();
       <?php if (isset($_SESSION['user_id'])): ?>
         <h2>Send a Message</h2>
 
-        <form>   <!-- Nese useri eshte i loguar i shfaqet forma -->
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Your Message" rows="6" required></textarea>
-          <button type="submit">Send Message</button>
+        <form method="POST">   <!-- Nese useri eshte i loguar i shfaqet forma -->
+          <input type="text" placeholder="Your Name" name="Name" required />
+          <input type="email" placeholder="Your Email" name="Email" required />
+          <textarea placeholder="Your Message" rows="6" name="Message" required></textarea>
+          <button type="submit" name="send">Send Message</button>
         </form>
 
         <?php else: ?>  <!-- Nese useri nuk eshte i loguar nuk i shfaqet forma -->

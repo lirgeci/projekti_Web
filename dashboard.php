@@ -2,7 +2,7 @@
 require_once('users.php');
 require_once('project.php');
 require_once('service.php'); // Shtova
-
+require_once('contactsCrud.php');
 session_start();
 
 $useri = new User();
@@ -13,6 +13,9 @@ $allProjects = $projekti->read();
 
 $sherbimi = new Service(); // Kri
 $allServices = $sherbimi->read(); // Merri
+
+$contact = new Contacts();
+$allContacts=$contact->read();
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +50,7 @@ $allServices = $sherbimi->read(); // Merri
     <div class="table-wrapper">
    <table border="1" class="tabela">
     <tr>
-        <th id="thUsers" colspan="3">Users</th>
+        <th id="thUsers" colspan="4">Users</th>
     </tr>
     <tr>
         <th>Name</th>
@@ -71,7 +74,7 @@ foreach($all as $key=>$value){
 <?php
 }
 ?>
-
+</table>
    <table border="1" class="tabela">
     <br><br><br><br><br>
     <tr>
@@ -159,7 +162,40 @@ foreach($all as $key=>$value){
     }
     ?>
    </table>
-   <br><br><br>
+   <br><br>
+   <table border="1" class="tabela">
+    <br><br><br><br><br>
+    <tr>
+        <th id="thUsers" colspan="3">Contacts
+        </th>
+    </tr>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Message</th>
+    </tr>
+    
+    <?php
+    if(!empty($allContacts)){
+        foreach($allContacts as $key => $value){
+    ?>
+    <tr>
+        <td><?php echo $value['Name']?></td>
+        <td><?php echo $value['Email']?></td>
+        <td><?php echo $value['Message']?></td>
+    </tr>
+    <?php
+        }
+    } else {
+    ?>
+    <tr>
+        <td colspan="4" style="text-align:center; padding:20px;">No messages</td>
+    </tr>
+    <?php
+    }
+    ?>
+</table>
+<br><br><br>
   </div>
 
 </body>

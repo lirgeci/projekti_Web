@@ -20,7 +20,7 @@ session_start();
         <li><a href="services.php">SERVICES</a></li>
         <li><a href="projects.php">PROJECTS</a></li>
         <li>
-            <h2><a href="#">iSTUDIO</a></h2>
+          <h2> <a href="#">iSTUDIO</a></h2>
         </li>
         <li><a href="aboutus.php">ABOUT US</a></li>
         <li><a href="contact.php">CONTACT</a></li>
