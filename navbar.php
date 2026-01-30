@@ -22,8 +22,11 @@
             <?php if ($_SESSION['role'] == 1): ?>
                 <li><a href="dashboard.php" class="<?php echo ($active_page == 'dashboard.php') ? 'active-link' : ''; ?>">DASHBOARD</a></li>
             <?php endif; ?>
-            <li><a href="logout.php" class="<?php echo ($active_page == 'logout.php') ? 'active-link' : ''; ?>">LOGOUT</a></li>
-        <?php endif; ?>
+           <li>
+    <a href="logout.php" onclick="return confirm('Are you sure you want to Logout?');">
+        LOGOUT
+    </a>
+</li><?php endif; ?>
     </ul>
 </nav>
 
