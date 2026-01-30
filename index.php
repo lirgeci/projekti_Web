@@ -15,28 +15,13 @@ session_start();
 
 <body>
   <header>
-    <nav class="nav">
-    <ul type="none">
-        <li><a href="services.php">SERVICES</a></li>
-        <li><a href="projects.php">PROJECTS</a></li>
-        <li>
-          <h2> <a href="#">iSTUDIO</a></h2>
-        </li>
-        <li><a href="aboutus.php">ABOUT US</a></li>
-        <li><a href="contact.php">CONTACT</a></li>
+        <?php include 'navbar.php'; ?>
 
-        <?php if (isset($_SESSION['user_id']) && isset($_SESSION['role']) && $_SESSION['role'] == 1): ?>
-          <li id="D"><a href="dashboard.php">DASHBOARD</a></li>
-          <li id="D"><a href="logout.php">LOGOUT</a></li>
-        <?php elseif (isset($_SESSION['user_id'])): ?>
-          <li id="D"><a href="logout.php">LOGOUT</a></li>
-        <?php endif; ?>
-    </ul>
-</nav>
-
-    <a href="signup.php">
+         <a href="signup.php">
       <button type="submit">Start your transformation</button></a>
-  </header>
+    </header>
+
+    
   <br />
   <br />
   <div class="layout">

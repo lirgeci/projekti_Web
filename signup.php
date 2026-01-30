@@ -21,13 +21,7 @@ $u->insert();
 
 <body>
     <header>
-        <nav class="nav">
-            <div class="navdiv">
-                <ul type="none">
-                    <li> <a href="index.php">iSTUDIO</a></li>
-                </ul>
-            </div>
-        </nav>
+        <?php include 'navbar.php'; ?>
     </header>
 
 

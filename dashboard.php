@@ -30,22 +30,7 @@ $allContacts=$contact->read();
 </head>
 <body>
     <header>
-    <nav class="nav">
-    <ul type="none">
-        <li><a href="services.php">SERVICES</a></li>
-        <li><a href="projects.php">PROJECTS</a></li>
-        <li><a href="index.php">iSTUDIO</a></li>
-        <li><a href="aboutus.php">ABOUT US</a></li>
-        <li><a href="contact.php">CONTACT</a></li>
-
-        <?php if (isset($_SESSION['user_id']) && isset($_SESSION['role']) && $_SESSION['role'] == 1): ?>
-          <li id="D"><a href="dashboard.php">DASHBOARD</a></li>
-          <li id="D"><a href="logout.php">LOGOUT</a></li>
-        <?php elseif (isset($_SESSION['user_id'])): ?>
-          <li id="D"><a href="logout.php">LOGOUT</a></li>
-        <?php endif; ?>
-    </ul>
-</nav>
+        <?php include 'navbar.php'; ?>
     </header>
     <div class="table-wrapper">
    <table border="1" class="tabela">

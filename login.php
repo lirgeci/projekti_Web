@@ -37,11 +37,9 @@ if(isset($_POST['login'])){
 </head>
 
 <body>
-        <nav class="nav">
-                <ul type="none"> 
-                    <li> <a href="#">iSTUDIO</a></li>
-                </ul>   
-        </nav>
+        <header>
+        <?php include 'navbar.php'; ?>
+    </header>
    
     <div class="login-container">
         <div class="form-box">
