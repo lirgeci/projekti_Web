@@ -3,6 +3,8 @@ require_once('users.php');
 require_once('project.php');
 require_once('service.php'); // Shtova
 
+session_start();
+
 $useri = new User();
 $all = $useri->read();
 
@@ -26,22 +28,21 @@ $allServices = $sherbimi->read(); // Merri
 <body>
     <header>
     <nav class="nav">
-    
-        <ul type="none">
-          <li> <a href="services.php">SERVICES</a></li>
-          <li>
-            <a href="projects.php">PROJECTS</a>
+    <ul type="none">
+        <li><a href="services.php">SERVICES</a></li>
+        <li><a href="projects.php">PROJECTS</a></li>
+        <li><a href="index.php">iSTUDIO</a></li>
+        <li><a href="aboutus.php">ABOUT US</a></li>
+        <li><a href="contact.php">CONTACT</a></li>
 
-          </li>
-          <li>
-            <h2><a href="#">iSTUDIO</a></h2>
-          </li>
-          <li><a href="aboutus.php">ABOUT US</a></li>
-          <li><a href="contact.php">CONTACT</a></li>
-          <li id="D"><a href="da.php">DASHBOARD</a></li>
-        </ul>
-    
-    </nav>
+        <?php if (isset($_SESSION['user_id']) && isset($_SESSION['role']) && $_SESSION['role'] == 1): ?>
+          <li id="D"><a href="dashboard.php">DASHBOARD</a></li>
+          <li id="D"><a href="logout.php">LOGOUT</a></li>
+        <?php elseif (isset($_SESSION['user_id'])): ?>
+          <li id="D"><a href="logout.php">LOGOUT</a></li>
+        <?php endif; ?>
+    </ul>
+</nav>
     </header>
     <div class="table-wrapper">
    <table border="1" class="tabela">

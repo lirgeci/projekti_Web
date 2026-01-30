@@ -1,5 +1,6 @@
 <?php 
 require_once('project.php');
+session_start();
 $projekti = new Project();
 $allProjects = $projekti->read();
 ?>
@@ -19,20 +20,23 @@ $allProjects = $projekti->read();
   <!-- Header -->
   <header>
     <nav class="nav">
-    
-        <ul type="none">
-          <li> <a href="services.php">SERVICES</a></li>
-          <li>
-            <h2>
-              <a href="projects.php">PROJECTS</a>
-            </h2>
-          </li>
-          <li><a href="index.php">iSTUDIO</a></li>
-          <li><a href="aboutus.php">ABOUT US</a></li>
-          <li><a href="contact.php">CONTACT</a></li>
-        </ul>
-     
-    </nav>
+    <ul type="none">
+        <li><a href="services.php">SERVICES</a></li>
+        <li><h2><a href="projects.php">PROJECTS</a></h2></li>
+        <li>
+            <a href="index.php">iSTUDIO</a>
+        </li>
+        <li><a href="aboutus.php">ABOUT US</a></li>
+        <li><a href="contact.php">CONTACT</a></li>
+
+        <?php if (isset($_SESSION['user_id']) && isset($_SESSION['role']) && $_SESSION['role'] == 1): ?>
+          <li id="D"><a href="dashboard.php">DASHBOARD</a></li>
+          <li id="D"><a href="logout.php">LOGOUT</a></li>
+        <?php elseif (isset($_SESSION['user_id'])): ?>
+          <li id="D"><a href="logout.php">LOGOUT</a></li>
+        <?php endif; ?>
+    </ul>
+</nav>
   </header>
 
   <p class="projects-intro">

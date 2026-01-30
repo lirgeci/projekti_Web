@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +26,12 @@
           <li><a href="index.php">iSTUDIO</a></li>
           <li><a class="big" href="#">ABOUT US</a></li>
           <li><a href="contact.php">CONTACT</a></li>
+          <?php if (isset($_SESSION['user_id']) && isset($_SESSION['role']) && $_SESSION['role'] == 1): ?>
+          <li id="D"><a href="dashboard.php">DASHBOARD</a></li>
+          <li id="D"><a href="logout.php">LOGOUT</a></li>
+          <?php elseif (isset($_SESSION['user_id'])): ?>
+          <li id="D"><a href="logout.php">LOGOUT</a></li>
+          <?php endif; ?>
         </ul>
      
     </nav>

@@ -48,7 +48,7 @@ public function insert(){
     $stm->execute([$this->name,$this->email,$this->password]);
     echo"<script>
 alert('Info successfully inserted'); 
-window.location.href = 'home.html';
+window.location.href = 'index.php';
 </script>";
 }
 

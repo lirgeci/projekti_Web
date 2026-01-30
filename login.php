@@ -15,6 +15,9 @@ if(isset($_POST['login'])){
         $_SESSION['user_id'] = $result['UserID'];
         $_SESSION['user_name'] = $result['FullName'];
         $_SESSION['user_email'] = $result['Email'];
+        $_SESSION['role'] = $result['Role']; // Store user role in session
+
+
         header('Location: index.php');
         exit();
     } else {

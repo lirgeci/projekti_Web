@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,20 +16,22 @@
   <!-- Header -->
   <header>
     <nav class="nav">
-
-      <ul type="none">
-        <li> <a href="services.php">SERVICES</a></li>
-        <li>
-          <a href="projects.php">PROJECTS</a>
-
-        </li>
-        <li><a href="index.php">iSTUDIO</a></li>
-        <li><a href="aboutus.php">ABOUT US</a></li>
-        <li>
-          <h2><a href="#">CONTACT</a></h2>
-        </li>
-      </ul>
-
+    
+        <ul type="none">
+          <li> <a href="services.php">SERVICES</a></li>
+          <li><a href="projects.php">PROJECTS</a></li>
+          <li><a href="index.php">iSTUDIO</a></li>
+          <li><a href="aboutus.php">ABOUT US</a></li>
+          <li><h2><a href="#">CONTACT</a></h2></li>
+          
+          <?php if (isset($_SESSION['user_id']) && isset($_SESSION['role']) && $_SESSION['role'] == 1): ?>
+          <li id="D"><a href="dashboard.php">DASHBOARD</a></li>
+          <li id="D"><a href="logout.php">LOGOUT</a></li>
+          <?php elseif (isset($_SESSION['user_id'])): ?>
+          <li id="D"><a href="logout.php">LOGOUT</a></li>
+          <?php endif; ?>
+        </ul>
+   
     </nav>
   </header>
 
@@ -48,20 +54,25 @@
     </div>
 
     <div class="contact-form">
-      <h2>Send a Message</h2>
-      <form id="contactForm" onsubmit="return Validate()" novalidate>
-        <!--e kem bo novalidate qe me ju shmang validimit default te browser-->
-        <input type="text" id="name" placeholder="Your Name" />
-        <p id="mesazhi1" class="error-style"></p>
+      <?php if (isset($_SESSION['user_id'])): ?>
+        <h2>Send a Message</h2>
 
-        <input type="email" id="email" placeholder="Your Email" />
-        <p id="mesazhi2" class="error-style"></p>
+        <form>   <!-- Nese useri eshte i loguar i shfaqet forma -->
+          <input type="text" placeholder="Your Name" required />
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" rows="6" required></textarea>
+          <button type="submit">Send Message</button>
+        </form>
 
-        <textarea id="message" placeholder="Your Message" rows="6"></textarea>
-        <p id="mesazhi3" class="error-style"></p>
+        <?php else: ?>  <!-- Nese useri nuk eshte i loguar nuk i shfaqet forma -->
 
-        <p id="mesazhi" class="error-style"></p>
-        <button type="submit">Send Message</button>
+          <div class="login-warning">
+    <p>⚠️ You must be logged in to send a message.</p>
+    <a href="login.php"><button>Login</button></a>
+    <a href="signup.php"><button>Sign Up</button></a>
+      </div>
+
+        <?php endif; ?>
       </form>
     </div>
   </div>
