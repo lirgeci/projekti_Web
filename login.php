@@ -19,6 +19,8 @@ if(isset($_POST['login'])){
 
         $_SESSION['logged_in'] = true; // per me i tregu sistemit qe je ky user eshte i loguar
 
+        setcookie('user_role', $result['Role'], time() + 3600, "/");
+        
         header('Location: index.php');
         exit();
     } else {

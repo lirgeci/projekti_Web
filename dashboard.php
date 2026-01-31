@@ -42,7 +42,7 @@ $allContacts=$contact->read();
 </head>
 <body>
     <header>
-        <?php include 'navbar.php'; ?>
+        <?php include_once 'navbar.php'; ?>
     </header>
     <div class="table-wrapper">
    <table border="1" class="tabela">
