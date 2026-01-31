@@ -25,6 +25,7 @@ if(isset($_POST['login'])){
         $error_message = 'Invalid email or password. Please try again or sign up first.';
     }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">

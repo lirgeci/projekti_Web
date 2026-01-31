@@ -33,7 +33,8 @@ $allServices = $serviceObj->read();
             <?php if(!empty($allServices)): ?>
                 <?php foreach($allServices as $service): ?>
                     <div class="project-card">
-                        <img src="<?php echo $service['Photo']; ?>" alt="" />
+                       <img src="uploads/<?php echo $service['Photo']; ?>" alt="<?php echo $service['ServiceName']; ?>" />
+
                         <h3><?php echo $service['ServiceName']; ?></h3>
                         <p class="price-text"><?php echo $service['Price']; ?> &euro;</p>
                     </div>

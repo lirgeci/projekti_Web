@@ -5,7 +5,26 @@ if (isset($_POST['save'])) {
     $data = new Service();
     $data->setServiceName($_POST['ServiceName']);
     $data->setPrice($_POST['Price']);
-    $data->setPhoto($_POST['Photo']);
+   if(isset($_FILES['Photo']) && $_FILES['Photo']['error'] === 0){
+        $fileTmp  = $_FILES['Photo']['tmp_name'];
+        $fileName = $_FILES['Photo']['name'];
+        $fileExt  = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
+        $allowed  = ['jpg','jpeg','png','gif'];
+
+        if(in_array($fileExt, $allowed)){
+            $newName = uniqid('', true) . "." . $fileExt;
+            $destination = 'uploads/' . $newName;
+
+            move_uploaded_file($fileTmp, $destination);
+
+            // Vendos emrin e ri në objekt
+            $data->setPhoto($newName);
+        } else {
+            echo "Lejohen vetëm imazhet: jpg, png, gif";
+        }
+    } else {
+        $data->setPhoto("null");
+    }
     $data->insert();
 }
 ?>
@@ -133,7 +152,7 @@ if (isset($_POST['save'])) {
 <div class="container">
     <h3>Add New Service</h3>
     
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <label>Service Name</label>
             <input type="text" name="ServiceName" required>
@@ -146,7 +165,7 @@ if (isset($_POST['save'])) {
 
         <div class="form-group">
             <label>Photo (filename)</label>
-            <input type="text" name="Photo" required>
+            <input type="file" name="Photo" accept="image/*" >
         </div>
 
         <button type="submit" name="save">SAVE</button>

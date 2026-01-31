@@ -110,7 +110,7 @@ foreach($all as $key=>$value){
     } else {
     ?>
     <tr>
-        <td colspan="4" style="text-align:center; padding:20px;">Nuk ka shërbime të regjistruara.</td>
+        <td colspan="4" style="text-align:center; padding:20px;">No services to show .Click "+ Add Project" to create one.</td>
     </tr>
     <?php
     }
@@ -153,7 +153,7 @@ foreach($all as $key=>$value){
     } else {
     ?>
     <tr>
-        <td colspan="4" style="text-align:center; padding:20px;">No projects yet. Click "+ Add Project" to create one.</td>
+        <td colspan="4" style="text-align:center; padding:20px;">No projects to show. Click "+ Add Project" to create one.</td>
     </tr>
     <?php
     }

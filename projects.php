@@ -28,50 +28,15 @@ $allProjects = $projekti->read();
 
   <!-- Projects Grid -->
   <div class="projects-grid">
-    <!-- Hardcoded Original Projects -->
-    <div class="project-card">
-      <img src="foto1(projects).png" alt="" />
-      <h3>Modern Living Space</h3>
-      <p>Residential · Prishtina</p>
-    </div>
-
-    <div class="project-card">
-      <img src="foto3(projects).png" alt="" />
-      <h3>Minimal Office Design</h3>
-      <p>Commercial · Tirana</p>
-    </div>
-
-    <div class="project-card">
-      <img src="foto2(projects).png" alt="" />
-      <h3>Scandinavian Apartment</h3>
-      <p>Residential · Skopje</p>
-    </div>
-
-    <div class="project-card">
-      <img src="foto4(projects).png" alt="" />
-      <h3>Boutique Hotel Concept</h3>
-      <p>Concept · Vienna</p>
-    </div>
-
-    <div class="project-card">
-      <img src="foto5(projects).png" alt="" />
-      <h3>Luxury Kitchen Design</h3>
-      <p>Residential · Prizren</p>
-    </div>
-
-    <div class="project-card">
-      <img src="foto6(projects).png" alt="" />
-      <h3>Creative Workspace</h3>
-      <p>Commercial · Berlin</p>
-    </div>
-
+    
     <!-- Dynamic Projects from Database -->
     <?php
     if(!empty($allProjects)){
         foreach($allProjects as $project){
     ?>
     <div class="project-card">
-      <img src="<?php echo $project['Photo']; ?>" alt="<?php echo $project['ProjectName']; ?>" />
+     <img src="uploads/<?php echo $project['Photo']; ?>" alt="<?php echo $project['ProjectName']; ?>" />
+
       <h3><?php echo $project['ProjectName']; ?></h3>
       <p><?php echo $project['Category']; ?></p>
     </div>

@@ -3,12 +3,12 @@ session_start();
 require_once('contactsCrud.php');
 
 if(isset($_POST['send'])){
-    if(isset($_SESSION['user_id'])){ // siguro që useri është i loguar
+    if(isset($_SESSION['user_id'])){ // siguro qe useri eshte i loguar
         $c = new Contacts();
         $c->setName($_POST['Name']);
         $c->setEmail($_POST['Email']);
         $c->setMessage($_POST['Message']);
-        $c->setUserID($_SESSION['user_id']); // kjo është thelbësore
+        $c->setUserID($_SESSION['user_id']); // kjo eshte thelbesore
         $c->insert();
     } else {
         echo "<script>alert('You must be logged in to send a message');</script>";

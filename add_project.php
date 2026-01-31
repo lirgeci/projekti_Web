@@ -5,9 +5,30 @@ if (isset($_POST['save'])){
     $p = new Project();
     $p->setProjectName($_POST['ProjectName']);
     $p->setCategory($_POST['Category']);
-    $p->setPhoto($_POST['Photo']);
+
+    if(isset($_FILES['Photo']) && $_FILES['Photo']['error'] === 0){
+        $fileTmp  = $_FILES['Photo']['tmp_name'];
+        $fileName = $_FILES['Photo']['name'];
+        $fileExt  = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
+        $allowed  = ['jpg','jpeg','png','gif'];
+
+        if(in_array($fileExt, $allowed)){
+            $newName = uniqid('', true) . "." . $fileExt;
+            $destination = 'uploads/' . $newName;
+
+            move_uploaded_file($fileTmp, $destination);
+
+        
+            $p->setPhoto($newName);
+        } else {
+            echo "Lejohen vetem imazhet: jpg, png, gif";
+        }
+    } else {
+        $p->setPhoto("null"); 
+    }
     $p->insert();
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -133,7 +154,7 @@ if (isset($_POST['save'])){
 <div class="container">
     <h3>Add New Project</h3>
 
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
         <div class="form-group">
             <label>Project Name</label>
             <input type="text" name="ProjectName" required>
@@ -146,7 +167,7 @@ if (isset($_POST['save'])){
 
         <div class="form-group">
             <label>Photo (filename)</label>
-            <input type="text" name="Photo" required>
+            <input type="file" name="Photo" accept="image/*" >
         </div>
 
         <button type="submit" name="save">SAVE</button>
