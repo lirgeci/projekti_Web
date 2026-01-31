@@ -5,6 +5,18 @@ require_once('service.php'); // Shtova
 require_once('contactsCrud.php');
 session_start();
 
+// Kontroll sigurie: përdoruesi duhet të jetë i kyçur
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php'); // Nëse nuk është i kyçur, ridrejto te login
+    exit();
+}
+
+// Kontroll për rolin e përdoruesit: vetëm admin mund të hyjë
+if (!isset($_SESSION['role']) || $_SESSION['role'] != 1) {
+    header('Location: index.php'); // Nëse nuk është admin, ridrejto tek faqja kryesore
+    exit();
+}
+
 $useri = new User();
 $all = $useri->read();
 

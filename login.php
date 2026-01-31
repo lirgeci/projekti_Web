@@ -17,6 +17,7 @@ if(isset($_POST['login'])){
         $_SESSION['user_email'] = $result['Email'];
         $_SESSION['role'] = $result['Role']; // Store user role in session
 
+        $_SESSION['logged_in'] = true; // per me i tregu sistemit qe je ky user eshte i loguar
 
         header('Location: index.php');
         exit();
