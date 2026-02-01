@@ -65,12 +65,11 @@ class Service extends dbConnect {
     }
 
     public function update(){
-        $sql = 'UPDATE services SET ServiceName=?, Price=?, Photo=? WHERE ServiceID=?';
+        $sql = 'UPDATE services SET ServiceName=?, Price=?  WHERE ServiceID=?';
         $stm = $this->dbconn->prepare($sql);
         $stm->execute([
             $this->serviceName,
             $this->price,
-            $this->photo,
             $this->id
         ]);
     }

@@ -13,7 +13,6 @@ if (isset($_POST['edit'])) {
     $data->setId($myId);
     $data->setServiceName($_POST['ServiceName']);
     $data->setPrice($_POST['Price']);
-    $data->setPhoto($_POST['Photo']);
     $data->update();
 
     echo "<script>
@@ -155,11 +154,6 @@ if (isset($_POST['edit'])) {
         <div class="form-group">
             <label>Price</label>
             <input type="number" name="Price" value="<?php echo $record['Price']; ?>" required>
-        </div>
-
-        <div class="form-group">
-            <label>Photo</label>
-            <input type="text" name="Photo" value="<?php echo $record['Photo']; ?>" required>
         </div>
 
         <button type="submit" name="edit">SAVE</button>

@@ -15,7 +15,7 @@ session_start();
 
 <body>
   <header>
-        <?php include 'navbar.php'; ?>
+        <?php include_once 'navbar.php'; ?>
 
          <a href="signup.php">
       <button type="submit">Start your transformation, Sign Up !</button></a>

@@ -30,7 +30,7 @@ if(isset($_POST['send'])){
 <body>
   <!-- Header -->
   <header>
-        <?php include 'navbar.php'; ?>
+        <?php include_once 'navbar.php'; ?>
     </header>
 
   <!-- Intro -->

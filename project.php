@@ -88,12 +88,11 @@ window.location.href = 'dashboard.php';
     }
 
     public function update(){
-        $sql = 'UPDATE projects SET ProjectName=?, Category=?, Photo=? WHERE ProjectID=?';
+        $sql = 'UPDATE projects SET ProjectName=?, Category=? WHERE ProjectID=?';
         $stm = $this->dbconn->prepare($sql);
         $stm->execute([
             $this->projectName,
             $this->category,
-            $this->photo,
             $this->id
         ]);
     }

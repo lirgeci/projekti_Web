@@ -19,7 +19,7 @@ $allProjects = $projekti->read();
 <body>
   <!-- Header -->
   <header>
-        <?php include 'navbar.php'; ?>
+        <?php include_once 'navbar.php'; ?>
     </header>
 
   <p class="projects-intro">

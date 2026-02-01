@@ -14,7 +14,7 @@ if (isset($_POST['edit'])) {
     $data->setId($myId);
     $data->setProjectName($_POST['ProjectName']);
     $data->setCategory($_POST['Category']);
-    $data->setPhoto($_POST['Photo']);
+  
     $data->update();
 
     echo "<script>
@@ -156,11 +156,6 @@ window.location.href='dashboard.php';
         <div class="form-group">
             <label>Category</label>
             <input type="text" name="Category" value="<?php echo $record['Category']; ?>" required>
-        </div>
-
-        <div class="form-group">
-            <label>Photo</label>
-            <input type="text" name="Photo" value="<?php echo $record['Photo']; ?>" required>
         </div>
 
         <button type="submit" name="edit">SAVE</button>

@@ -16,7 +16,7 @@ $allServices = $serviceObj->read();
 </head>
 <body>
     <header>
-        <?php include 'navbar.php'; ?>
+        <?php include_once 'navbar.php'; ?>
    
 
         <div class="ourservices">

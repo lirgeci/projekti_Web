@@ -15,7 +15,7 @@ session_start();
 
 <body>
     <header>
-        <?php include 'navbar.php'; ?>
+        <?php include_once 'navbar.php'; ?>
     </header>
     <br><br>
     <div class="box">
