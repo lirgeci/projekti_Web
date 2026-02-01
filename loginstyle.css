@@ -24,29 +24,7 @@ form{
     max-width: 500px; /* per responsivitet */
     height: auto; /* per responsivitet */
 }
-ul {
-    margin: 0;
-    padding: 0;
-}
-li {
-    font-weight: 600;
-}
-.nav a {
-    color:rgb(123, 123, 123);;       
-    text-decoration: none;
-    font-size: 20px;
-    line-height: 50px;  
-    padding-left: 20px; 
-    letter-spacing: 3px;
-}
 
-.nav {
-  background-color:rgb(206, 205, 202);; 
-  height: 50px;
-  margin: 0;
-  padding: 0;
-  width: 100%;                                   
-}
 
 .form-box{
     display: flex;

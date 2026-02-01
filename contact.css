@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: "Cormorant Garamond", serif;
+ font-family: Cormorant Garamond;
   background-color: #faf9f7;
   color: #4a3f3f;
 }
@@ -22,7 +22,7 @@ body {
   align-items: center;
   margin: 0;
   padding: 0;
-  font-family: "Cormorant Garamond", serif;
+ 
   font-size: 36px;
   letter-spacing: 3px;
   flex-wrap: wrap; /* per responsivitet */
@@ -122,7 +122,7 @@ body {
   margin-bottom: 15px;
   border: 1px solid #ccc;
   border-radius: 8px;
-  font-family: "Cormorant Garamond", serif;
+  
   font-size: 16px;
 }
 
@@ -163,7 +163,7 @@ body {
 .footer {
   background-color: #4a3f3f;
   color: rgba(227, 210, 179, 0.95);
-  font-family: "Cormorant Garamond", serif;
+
 }
 
 .footer-top {

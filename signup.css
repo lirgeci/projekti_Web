@@ -1,4 +1,4 @@
-* {
+*{
   font-family: Lucida Bright;
   box-sizing: border-box; /* per responsivitet */
 }
@@ -9,7 +9,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Raleway", sans-serif;
-}
+} 
+
 .signup-container {
   display: flex;
   justify-content: center;
@@ -27,38 +28,6 @@ form {
   width: 100%; /* per responsivitet */
   max-width: 500px; /* per responsivitet */
   height: auto; /* per responsivitet */
-}
-ul {
-  margin: 0;
-  padding: 0;
-}
-li {
- 
-  font-weight: 600;
-}
-.navdiv a {
-  color: rgb(123, 123, 123);
-  text-decoration: none;
-  font-size: 20px;
-  line-height: 50px;
-  padding-left: 20px;
-  letter-spacing: 3px;
-}
-
-.nav {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-}
-
-header {
-  margin-top: 0;
-  padding-top: 0;
-  width: 100%;
-}
-.nav {
-  background-color: rgb(206, 205, 202);
-  height: 50px;
 }
 
 .form-box {
