@@ -64,7 +64,7 @@ function Validate() {
         return false; // e nal faqen me bo refresh
     }
 
-    // DING DING DING PO BON
+
     alert("Thank you! Your message for iSTUDIO has been sent.");
     document.getElementById('contactForm').reset();
     

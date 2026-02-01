@@ -7,50 +7,6 @@ body {
 
 /* Headeri */
 
-.nav {
-  background-color: rgba(227, 210, 179, 0.916);
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.nav ul {
-  list-style: none;
-  display: flex;
-  gap: 50px;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 36px;
-  letter-spacing: 3px;
-
-  flex-wrap: wrap; /* per responsivitet */
-  justify-content: center; /* per responsivitet */
-}
-
-.nav ul li a {
-  text-decoration: none;
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.nav ul li h2 a {
-  font-size: 34px;
-  font-weight: bold;
-  text-decoration: none;
-  color: #ffffff;
-}
-
-.nav ul li a:hover {
-  color: rgb(206, 172, 114);
-}
-
-.nav ul li h2 a:hover {
-  color: rgb(206, 172, 114);
-}
 
 .projects-intro {
   text-align: center;

@@ -54,10 +54,17 @@ class Project extends dbConnect{
         $sql = "INSERT INTO projects(ProjectName, Category, Photo) VALUES(?,?,?)";
         $stm = $this->dbconn->prepare($sql);
         $stm->execute([$this->projectName, $this->category, $this->photo]);
+        if($stm->rowCount()>0){
         echo "<script>
-alert('Project successfully inserted'); 
-window.location.href = 'dashboard.php';
-</script>";
+        alert('Project successfully inserted'); 
+        window.location.href = 'dashboard.php';
+        </script>";
+    }else{
+        echo "<script>
+        alert('Project could not insert, try again!'); 
+        window.location.href = 'dashboard.php';
+        </script>";
+    }
     }
 
     public function read(){
@@ -73,10 +80,17 @@ window.location.href = 'dashboard.php';
         $stm = $this->dbconn->prepare($sql);
         $stm->bindParam(':id', $id);
         $stm->execute();
+        if($stm->rowCount()>0){
         echo "<script>
-alert('Project successfully deleted!'); 
-window.location.href = 'dashboard.php';
-</script>";
+        alert('Project successfully deleted'); 
+        window.location.href = 'dashboard.php';
+        </script>";
+    }else{
+        echo "<script>
+        alert('Project could not delete, try again!'); 
+        window.location.href = 'dashboard.php';
+        </script>";
+    }
     }
 
     public function readByID($id){

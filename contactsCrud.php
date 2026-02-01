@@ -56,6 +56,8 @@ class Contacts extends dbConnect{
     $stm->execute([$this->Name,$this->Email,$this->Message,$this->UserID]);
     if($stm->rowCount()>0){
         echo "<script>alert('Message sent successfully!');</script>";
+    }else{
+         echo "<script>alert('Message could not send, please try again!');</script>";
     }
 }
 

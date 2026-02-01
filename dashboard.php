@@ -44,6 +44,7 @@ $allContacts=$contact->read();
     <header>
         <?php include_once 'navbar.php'; ?>
     </header>
+    <br><br>
     <div class="table-wrapper">
    <table border="1" class="tabela">
     <tr>

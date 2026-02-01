@@ -46,10 +46,17 @@ public function insert(){
     $sql="INSERT INTO users(FullName,Email,Password) values(?,?,?)";
     $stm=$this->dbconn->prepare($sql);
     $stm->execute([$this->name,$this->email,$this->password]);
-    echo"<script>
+    if($stm->rowCount()>0){
+        echo"<script>
 alert('Info successfully inserted'); 
 window.location.href = 'login.php';
 </script>";
+    }else{
+        echo"<script>
+alert('Info not inserted'); 
+window.location.href = 'signup.php';
+</script>";
+    }
 }
 
 
@@ -67,10 +74,17 @@ $sql="DELETE FROM users WHERE UserID=:id";
 $stm=$this->dbconn->prepare($sql);
 $stm->bindParam(':id',$id);
 $stm->execute();
-echo "<script>
+if($stm->rowCount()>0){
+    echo "<script>
 alert('Data successfully deleted!'); 
 window.location.href = 'dashboard.php';
 </script>";
+}else{
+    echo "<script>
+alert('Could not delete, please try again !'); 
+window.location.href = 'dashboard.php';
+</script>";
+}
 }
 
 

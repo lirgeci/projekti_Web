@@ -37,7 +37,7 @@ if(isset($_POST['send'])){
   <div class="contact-intro">
     <h1>Get in Touch</h1>
     <p>
-      Have a project in mind or want to collaborate? Send us a message and
+      Have a project in mind, a request or want to collaborate? Send us a message with your prefered credentials and
       we’ll get back to you as soon as possible.
     </p>
   </div>
