@@ -18,7 +18,7 @@ function Validate(){
     let errorsUser=null;
     let errorsPass=null;
     let error1=null;
-    let regex1=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let regex1=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$/;
 
     if(user.value==""){
         errorsUser='Please enter your email';

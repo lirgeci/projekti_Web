@@ -56,10 +56,11 @@ if(isset($_POST['send'])){
       <?php if (isset($_SESSION['user_id'])): ?>
         <h2>Send a Message</h2>
 
-        <form method="POST">   <!-- Nese useri eshte i loguar i shfaqet forma -->
-          <input type="text" placeholder="Your Name" name="Name" required />
-          <input type="email" placeholder="Your Email" name="Email" required />
-          <textarea placeholder="Your Message" rows="6" name="Message" required></textarea>
+        <form method="POST" onsubmit="return Validate()" novalidate>   <!-- Nese useri eshte i loguar i shfaqet forma -->
+          <input type="text" placeholder="Your Name" name="Name" id="name" required />
+          <input type="email" placeholder="Your Email" name="Email" id="email" required />
+          <textarea placeholder="Your Message" rows="6" name="Message" id="message" required></textarea>
+          <p id="m" style="color:red"></p>
           <button type="submit" name="send">Send Message</button>
         </form>
 

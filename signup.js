@@ -27,7 +27,7 @@ function ValidateSignup() {
     let errorField = null;
 
     let regexName = /^[A-Za-z\s]{3,}$/;
-    let regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    let regexEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$/;
     let regexPassword = /^(?=.*\d)(?=.*[!@#$%])[A-Za-z\d!@#$%]{12,}$/;
 
     

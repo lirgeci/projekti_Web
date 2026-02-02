@@ -1,72 +1,34 @@
-// e fshin red text si tifllosh me shkrujt per sdytsh
-const inputs = ['name', 'email', 'message'];
-inputs.forEach(id => {
-    const el = document.getElementById(id);
-    if (el) {
-        el.addEventListener('input', function() {
-            // i fshin krejt mesazhet kur ndrron dicka
-            document.getElementById('mesazhi1').innerText = '';
-            document.getElementById('mesazhi2').innerText = '';
-            document.getElementById('mesazhi3').innerText = '';
-            if(document.getElementById('mesazhi')) {
-                document.getElementById('mesazhi').innerText = '';
-            }
-        });
-    }
-});
+let name1 = document.getElementById('name');
+let email = document.getElementById('email');
+let message=document.getElementById('message');
 
+name1.addEventListener("input",function(){
+    document.getElementById('m').innerText="";
+   
+})
 
-function Validate() {
-    let name = document.getElementById('name');
-    let email = document.getElementById('email');
-    let message = document.getElementById('message');
+email.addEventListener("input",function(){
+    document.getElementById('m').innerText="";
+})
 
-    let errorFocus = null;
-    let hasErrors = false;
-
-    let regexName = /^[a-zA-Z\s]{3,}$/;
-    let regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    // i kontrollon krejt perniher a jon mir
-
-    // emri
-    if (name.value.trim() == "") {
-        document.getElementById('mesazhi1').innerText = 'Please enter your name';
-        if (!errorFocus) errorFocus = name;
-        hasErrors = true;
-    } else if (!(regexName.test(name.value))) {
-        document.getElementById('mesazhi1').innerText = 'Name must be at least 3 letters';
-        if (!errorFocus) errorFocus = name;
-        hasErrors = true;
-    }
-
-    // email
-    if (email.value.trim() == "") {
-        document.getElementById('mesazhi2').innerText = 'Please enter your email';
-        if (!errorFocus) errorFocus = email;
-        hasErrors = true;
-    } else if (!(regexEmail.test(email.value))) {
-        document.getElementById('mesazhi2').innerText = 'Invalid email address';
-        if (!errorFocus) errorFocus = email;
-        hasErrors = true;
-    }
-
-    // mesazhi
-    if (message.value.trim().length < 10) {
-        document.getElementById('mesazhi3').innerText = 'Message must be at least 10 characters';
-        if (!errorFocus) errorFocus = message;
-        hasErrors = true;
-    }
-
-
-    if (hasErrors) {
-        errorFocus.focus(); // e qon kursorin te fusha e par me gabime
-        return false; // e nal faqen me bo refresh
-    }
-
-
-    alert("Thank you! Your message for iSTUDIO has been sent.");
-    document.getElementById('contactForm').reset();
+function Validate(){
     
-    return false; // prap e nal refresh met kallxu qe hey kashku mesazhi
+let name = document.getElementById('name').value
+let email = document.getElementById('email').value
+let message=document.getElementById('message').value;
+let regName=/^[a-zA-Z0-9]{3,}$/;
+let regEmail=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{3,}$/;
+    if(name.trim()=="" || email.trim()=="" || message.trim()==""){
+        document.getElementById('m').innerText='Fill all fields!';
+        return false;
+    } else if(!regName.test(name)){
+         document.getElementById('m').innerHTML='Enter valid name!';
+        return false;
+    }else if(!regEmail.test(email)){
+        document.getElementById('m').innerHTML='Enter valid email!';
+        return false
+    }
+    return true;
+   
 }
+
