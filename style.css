@@ -1,5 +1,5 @@
 * {
-  font-family: "Cormorant Garamond", serif;
+  font-family: Cormorant Garamond;
 }
 
 body {
@@ -10,7 +10,7 @@ header button {
   position: absolute;
   top: 90%;
   left: 50%;
-  transform: translate(-50%, -50%);
+ transform: translate(-50%, -50%);
   padding-inline: 40px;
   padding-block: 10px;
   border-radius: 15px;
@@ -43,7 +43,7 @@ header {
   background-repeat: no-repeat;
 }
 
-.nav {
+/*.nav {
   background-color: rgba(227, 210, 179, 0.916);
   display: flex;
   justify-content: center;
@@ -78,7 +78,7 @@ header {
 
 .nav ul li a:hover {
   color: rgb(206, 172, 114);
-}
+}*/
 
 .layout {
   padding-left: 100px;

@@ -12,6 +12,7 @@ $allServices = $serviceObj->read();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iSTUDIO - Services</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="services.css">
 </head>
 <body>
