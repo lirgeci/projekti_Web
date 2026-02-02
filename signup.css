@@ -8,17 +8,18 @@ body {
   background-image: url(foto11.png);
   background-repeat: no-repeat;
   background-size: cover;
-  font-family: "Raleway", sans-serif;
+  /* font-family: "Raleway", sans-serif; */
+  overflow: hidden; /* nuk e len mu bo scroll */
 } 
 
 .signup-container {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding-top: 5px;
-  height: auto;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 30px;
+  padding-bottom: 40px;
   box-sizing: border-box;
-
 }
 form {
   background-color: rgb(206, 205, 202);

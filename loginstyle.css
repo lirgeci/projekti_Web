@@ -7,13 +7,16 @@ body {
     background-image: url(foto11.png);
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden; /* nuk e len mu bo scroll */
 }
 .login-container{
     display: flex;
     justify-content: center;
-    align-items: center;
-    height: auto; /* per responsivitet */
-    margin-top: 50px;  /* per responsivitet */
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    box-sizing: border-box;
 }
 form{
     background-color: rgb(206, 205, 202);
