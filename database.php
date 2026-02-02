@@ -18,6 +18,4 @@ die("Nuk mund të lidhej me bazën e të dhënave {$this->dbname} :" . $pdoe->ge
 return $this->conn;
 }
 }
-//$db = new dbConnect();
-//$conn = $db->connectDB();
 ?>

@@ -8,25 +8,24 @@ if (!isset($_GET['UserID'])) {
 }
 $myId = $_GET['UserID'];
 
-// 1️⃣ Merr të dhënat ekzistuese për userin
+// I merr te dhenat e userit
 $record = $data->readByID($myId);
 
-// 2️⃣ Kur shtypet RUAJ
+// Kur editohet
 if (isset($_POST['edit'])) {
-    // Vendosim ID-në e userit
+  
     $data->setId($myId);
 
-    // Vendosim të dhënat e reja nga forma
+    // Vendosim te dhenat e perditsuara
     $data->setName($_POST['FullName']);
     $data->setEmail($_POST['Email']);
     $data->setPassword($_POST['Password']);
 
-    // Thirr update
     $data->update();
 
-    // Alert + ridrejtim pas update
+    // Ben alert dhe ridrejtim pas update
     echo "<script>
-        alert('Te dhenat jane PERDITESUAR me sukses');
+        alert('Data has been UPDATED successfully.');
         window.location.href='dashboard.php';
     </script>";
 }

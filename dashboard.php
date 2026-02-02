@@ -1,19 +1,19 @@
 <?php
 require_once('users.php');
 require_once('project.php');
-require_once('service.php'); // Shtova
+require_once('service.php'); 
 require_once('contactsCrud.php');
 session_start();
 
-// Kontroll sigurie: përdoruesi duhet të jetë i kyçur
+// Kontrollon nese useri o i kyqur
 if (!isset($_SESSION['user_id'])) {
-    header('Location: login.php'); // Nëse nuk është i kyçur, ridrejto te login
+    header('Location: login.php'); // nese nuk kyqet ridrejto tek login
     exit();
 }
 
-// Kontroll për rolin e përdoruesit: vetëm admin mund të hyjë
+// Kontrollon a o admin
 if (!isset($_SESSION['role']) || $_SESSION['role'] != 1) {
-    header('Location: index.php'); // Nëse nuk është admin, ridrejto tek faqja kryesore
+    header('Location: index.php'); // nese nuk o admin ridrejtim ne log in
     exit();
 }
 
@@ -23,8 +23,8 @@ $all = $useri->read();
 $projekti = new Project();
 $allProjects = $projekti->read();
 
-$sherbimi = new Service(); // Kri
-$allServices = $sherbimi->read(); // Merri
+$sherbimi = new Service(); 
+$allServices = $sherbimi->read(); 
 
 $contact = new Contacts();
 $allContacts=$contact->read();
@@ -35,7 +35,7 @@ $allContacts=$contact->read();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard | iSTUDIO</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="dashboard.css" />

@@ -26,9 +26,9 @@ form {
   padding: 20px;
   border-radius: 10px;
   border: none;
-  width: 100%; /* per responsivitet */
-  max-width: 500px; /* per responsivitet */
-  height: auto; /* per responsivitet */
+  width: 100%; 
+  max-width: 500px; 
+  height: auto; 
 }
 
 .form-box {
@@ -37,9 +37,9 @@ form {
   align-items: center;
   flex-direction: column;
   padding: 10px;
-  width: 100%; /* per responsivitet */
-  max-width: 440px; /* per responsivitet */
-  height: auto; /* per responsivitet */
+  width: 100%; 
+  max-width: 440px; 
+  height: auto; 
   font-size: 19px;
   font-weight: 600;
   letter-spacing: 1px;
@@ -75,8 +75,8 @@ form {
 }
 .separator-div {
   padding-left: 100px;
-  width: 100%; /* per responsivitet */
-  max-width: 300px; /* per responsivitet */
+  width: 100%; 
+  max-width: 300px; 
   margin: 0 auto;
   padding: 0;
 }
@@ -112,8 +112,8 @@ form {
 }
 .input-box input {
   padding: 10px;
-  width: 100%; /* per responsivitet */
-  max-width: 300px; /* per responsivitet */
+  width: 100%; 
+  max-width: 300px; 
   border-radius: 12px;
   border: none;
   color: rgb(54, 54, 52);

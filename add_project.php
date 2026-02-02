@@ -12,10 +12,11 @@ if (isset($_POST['save'])){
         $fileExt  = strtolower(pathinfo($fileName, PATHINFO_EXTENSION));
         $allowed  = ['jpg','jpeg','png','gif'];
 
+        //uniqid siguron qe emri i imazhit o unik
         if(in_array($fileExt, $allowed)){
             $newName = uniqid('', true) . "." . $fileExt;
             $destination = 'uploads/' . $newName;
-
+            //zhvendos foton ne memorien uploads
             move_uploaded_file($fileTmp, $destination);
 
         
@@ -153,8 +154,8 @@ if (isset($_POST['save'])){
 
 <div class="container">
     <h3>Add New Project</h3>
-
-    <form method="POST" enctype="multipart/form-data">
+                    <!--enctype siguron qe tdhenat me shku si foto jo si tekst-->
+    <form method="POST" enctype="multipart/form-data"> 
         <div class="form-group">
             <label>Project Name</label>
             <input type="text" name="ProjectName" required>

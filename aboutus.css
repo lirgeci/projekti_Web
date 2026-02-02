@@ -101,6 +101,7 @@ display: flex;
   max-width: 600px;
   border-radius: 10px;
 }
+/*footer*/
 .footer {
   background-color: #4a3f3f;
   color: #efe8e8;
@@ -147,7 +148,7 @@ a {
   border-top: 1px solid rgba(198, 193, 193, 0.5);
   color: #d2cbcb;
 }
-
+/*Responsiviteti*/
 @media (max-width: 1024px) {
   .about-us {
     margin-left: 20px;

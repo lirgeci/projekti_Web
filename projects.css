@@ -36,8 +36,8 @@ body {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
   transition: 0.3s ease;
   text-align: center;
-  flex: 1 1 300px; /* per responsivitet */
-  max-width: 360px; /* per responsivitet */
+  flex: 1 1 300px; 
+  max-width: 360px; 
 }
 
 .project-card:hover {
@@ -84,7 +84,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* ===== Our Design Process ===== */
+/* Our Design Process */
 
 .process {
   background-color: rgba(227, 210, 179, 0.3);

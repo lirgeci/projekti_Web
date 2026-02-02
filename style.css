@@ -30,7 +30,6 @@ header button {
 header button:hover {
   background-color: #f7eed0;
   transform: translate(-50%, -50%) scale(1.05);
-  /*pop effect */
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
@@ -83,8 +82,8 @@ header {
 
 .carousel {
   position: relative;
-  width: 100%; /* per responsivitet */
-  max-width: 800px; /* per responsivitet */
+  width: 100%; 
+  max-width: 800px; 
   aspect-ratio: 2 / 1; /* Me rujt madhesine e fotos brenda carouselit */
   margin: 40px auto;
   overflow: hidden;
