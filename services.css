@@ -11,7 +11,12 @@ body {
 }
 
 /* HEADER  */
-
+header {
+    background-color: rgba(227, 210, 179, 0.916);
+    padding-bottom: 80px;
+    width: 100%;
+    text-align: center;
+}
 
 .ourservices {
     padding: 40px 20px;
